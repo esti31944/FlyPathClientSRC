@@ -12,7 +12,7 @@ const libraries = ['places', 'maps'];
 
 function App() {
 return (
-  <LoadScript googleMapsApiKey="AIzaSyA5bq2ACWz_-BDfsSE5DhgWT3lIhXDRGH0" libraries={libraries}>
+  <LoadScript googleMapsApiKey="..." libraries={libraries}>
       <Router>
           <Layout>
             <Routes>
