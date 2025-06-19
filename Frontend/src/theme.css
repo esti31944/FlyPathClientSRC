@@ -1,0 +1,82 @@
+
+:root {
+    --color-primary: #22D1F2;
+    --color-secondary: #0A739D;
+    --color-text: #071B28;
+    --font-family: "Segoe UI", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: #f5f9fa;
+    color: var(--color-text);
+  }
+  
+  button {
+  
+    
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12); 
+
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    background: linear-gradient(90deg, #22D1F2, #0A739D);
+    z-index: -1;
+    border-radius: inherit;
+
+    transition: all 0.3s ease;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: 2px; left: 2px; right: 2px; bottom: 2px;
+    background: white;
+    z-index: -1;
+    border-radius: inherit;
+
+    transition: all 0.3s ease;
+  }
+  
+  
+  button:hover::after {
+    background: #f0f0f0; /* לדוגמה צבע אפור בהיר ברקע */
+  }
+
+  button:hover {
+    transform: scale(1.05); /* מגדיל מעט את הכפתור */
+  }
+  
+  input, textarea {
+   
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 10px;
+    color: var(--color-text);
+    transition: border-color 0.3s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+  }
+
+  input:focus, textarea:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+  }
+  
